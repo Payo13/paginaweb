@@ -9,12 +9,14 @@ import {
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
+import Prueba from './pages/Prueba';
 import Register from './pages/Register';
 
 function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/prueba" element={<Prueba/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
         <Route path="/contact" element={<Contact/>}/>

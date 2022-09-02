@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+
 import Card from '../components/Card';
 import Navbar from '../components/Navbar';
 import React from 'react';
@@ -11,6 +13,18 @@ const links_Register=[
 
 
 function Register(){
+    const [data,setData] = useState([{}])
+    
+    useEffect(()=>{
+        fetch('/api/register').then(
+            response=>response.json()
+        ).then(
+            data => {
+                setData(data)
+                console.log(data)
+            }
+        )
+    },[])
     return(
     
         <>
